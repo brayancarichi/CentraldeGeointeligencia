@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        function desactivar(){
+            document.logingform.submit.disabled = !document.logingform.terms.checked;
+
+        };
+        function disablesend(){
+            //document.submit.disabled = !document.terms.checked;
+            alert('Su información quedó registrada de manera correcta. En breve nos comunicaremos. Atte.: Central de Geointeligencia S.A de C.V.')
+        };
+    </script>
+</head>
+<body>
+
+    <form action="https://formsubmit.co/contactocentralgeointeligencia@gmail.com" method="POST" autocomplete="off" name="logingform">
+        <h2>Contacto</h2>
+        <div class="form-txt">
+            <a href="#">Política de privacidad</a>
+            <a href="#">Términos y condiciones</a>
+        </div>
+
+        <div class="input-group">
+
+            <input type="text" name="Nombre" placeholder="Nombre Completo">
+            <input type="tel" name="telefono" placeholder="Teléfono">
+            <input type="email" name="Correo" placeholder="Correo Electronico">
+            <textarea name="Mensaje" cols="30" rows="5" placeholder="Coméntanos brevemente en que servicios estás interesado/a"></textarea>
+            <label for="terms">Acepto los términos y condiciones</label>
+            <input type="checkbox" name="terms" onclick=desactivar()>
+            <input class="btn" name="submit" type="submit" value="Enviar" onclick=disablesend() disabled>
+            <input type="hidden" name="_next" value="https://brayancarichi.github.io/CentraldeGeointeligencia/Contacto/index.html">
+            <input type="hidden" name="_captcha" value="false">
+            
+
+        </div>
+
+    </form>
+    
+
+
+</body>
+</html>
